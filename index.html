@@ -47,7 +47,9 @@
           >
             {{el.action}}
             <!-- richiamo la funzione removeItem per eliminare li al click su fa-times -->
-            <i @click.stop="removeItem(index)" class="fas fa-times"></i>
+            <i
+             @click.stop="removeItem(index)" 
+             class="fas fa-times"></i>
           </li>
         </ul>
       </section>

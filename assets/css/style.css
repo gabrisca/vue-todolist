@@ -14,13 +14,13 @@ body {
   width: 70%;
   height: 100vh;
   margin: 0 auto;
-  background-color: rgba(248, 50, 93, 0.281);
+  /* background-color: rgba(248, 50, 93, 0.281); */
 }
 
 .logo {
   width: 60%;
   margin: 30px auto;
-  background-color: rgba(248, 50, 93, 0.281);
+  /* background-color: rgba(248, 50, 93, 0.281); */
 }
 
 .logo img {
@@ -28,7 +28,7 @@ body {
 }
 
 .todolist {
-  background-color: rgba(248, 50, 93, 0.281);
+  /* background-color: rgba(248, 50, 93, 0.281); */
   text-align: center;
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 .list ul {
-  background-color: rgb(233, 215, 215);
+  background-color: rgba(214, 208, 208, 0.11);
   margin: 20px 5px;
 }
 

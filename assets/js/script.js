@@ -9,6 +9,7 @@
 const app = new Vue({
   el: "#app",
   data: {
+    checked: false,
     visibility: false,
     str: "",
     // array di obj con una stringa e stato checked(true o false)
