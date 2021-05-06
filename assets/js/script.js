@@ -9,6 +9,7 @@
 const app = new Vue({
   el: "#app",
   data: {
+    // array di obj con una stringa e stato checked(true o false)
     toDoarray:[
       {
         action: "Studiare",
@@ -29,6 +30,7 @@ const app = new Vue({
     ],
   },
   methods: {
+    // funzione per rimuovere li 
     removeItem(index){
       this.toDoarray.splice(index,1)
     }
