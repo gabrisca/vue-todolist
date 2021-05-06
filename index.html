@@ -30,13 +30,14 @@
     <section class="list">
       <ul>
         <li 
-          v-for="el in toDoarray"
+          v-for="(el, index) in toDoarray"
           :class="el.checked === true ? 'checked' : null"
-        
-        >{{el.action}}
-          <i class="fas fa-times"></i>
+          @click="el.checked = !el.checked">
+        {{el.action}}
+          <i
+          @click="removeItem" 
+          class="fas fa-times"></i>
         </li>
-        
       </ul>
       
     </section>
