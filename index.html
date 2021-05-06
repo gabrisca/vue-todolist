@@ -29,26 +29,14 @@
     <!-- ul -->
     <section class="list">
       <ul>
-        <li>
-          <span>Ciao</span>
+        <li 
+          v-for="el in toDoarray"
+          :class="el.checked === true ? 'checked' : null"
+        
+        >{{el.action}}
           <i class="fas fa-times"></i>
         </li>
-        <li>
-          <span>Ciao</span>
-          <i class="fas fa-times"></i>
-        </li>
-        <li>
-          <span>Ciao</span>
-          <i class="fas fa-times"></i>
-        </li>
-        <li>
-          <span>Ciao</span>
-          <i class="fas fa-times"></i>
-        </li>
-        <li>
-          <span>Ciao</span>
-          <i class="fas fa-times"></i>
-        </li>
+        
       </ul>
       
     </section>

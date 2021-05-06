@@ -58,6 +58,11 @@ body {
   cursor: pointer;
 }
 
+.list ul li.checked{
+  color: lightgray;
+  text-decoration: line-through;
+}
+
 .list ul li:hover {
   background-color: rgb(247, 236, 236);
 }
@@ -69,5 +74,7 @@ body {
 .list ul li i:hover {
   color: red;
 }
+
+
 
 

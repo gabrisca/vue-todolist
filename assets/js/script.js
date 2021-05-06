@@ -9,7 +9,24 @@
 const app = new Vue({
   el: "#app",
   data: {
-
+    toDoarray:[
+      {
+        action: "Studiare",
+        checked: false
+      },
+      {
+        action: "Ripassare",
+        checked: false
+      },
+      {
+        action: "Mangiare",
+        checked: true
+      },
+      {
+        action: "Dormire",
+        checked: false
+      },
+    ],
   },
   methods: {
     
