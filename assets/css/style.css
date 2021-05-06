@@ -6,5 +6,68 @@
 
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: crimson;
+  background-color: white;
 }
+
+.container {
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: rgba(248, 50, 93, 0.281);
+}
+
+.logo {
+  width: 60%;
+  margin: 30px auto;
+  background-color: rgba(248, 50, 93, 0.281);
+}
+
+.logo img {
+  width: 100%;
+}
+
+.todolist {
+  background-color: rgba(248, 50, 93, 0.281);
+  text-align: center;
+}
+
+.todolist input {
+  padding: 6px;
+  border-radius: 15px;
+  outline: none;
+}
+
+.todolist i {
+  cursor: pointer;
+}
+
+.todolist i:hover{
+  color: #3EE165;
+}
+
+.list ul {
+  background-color: rgb(233, 215, 215);
+  margin: 20px 5px;
+}
+
+.list ul li{
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  border-bottom: 1px solid #3EE165;
+  cursor: pointer;
+}
+
+.list ul li:hover {
+  background-color: rgb(247, 236, 236);
+}
+
+.list ul li:last-child {
+  border: none;
+}
+
+.list ul li i:hover {
+  color: red;
+}
+
+
