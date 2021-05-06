@@ -5,7 +5,8 @@
 }
 
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: white;
 }
 
@@ -41,8 +42,12 @@ body {
   cursor: pointer;
 }
 
-.todolist i:hover{
-  color: #3EE165;
+.todolist i:hover {
+  color: #3ee165;
+}
+
+.todolist h3 {
+  color: red;
 }
 
 .list ul {
@@ -50,15 +55,16 @@ body {
   margin: 20px 5px;
 }
 
-.list ul li{
+.list ul li {
   display: flex;
   justify-content: space-between;
   padding: 6px;
-  border-bottom: 1px solid #3EE165;
+  border-bottom: 1px solid #3ee165;
   cursor: pointer;
+  font-size: larger;
 }
 
-.list ul li.checked{
+.list ul li.checked {
   color: lightgray;
   text-decoration: line-through;
 }
@@ -74,7 +80,3 @@ body {
 .list ul li i:hover {
   color: red;
 }
-
-
-
-

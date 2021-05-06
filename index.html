@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToDoList</title>
-   <!-- f_awsome -->
-   <link
-   rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-   integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="crossorigin="anonymous"/>
-  <!-- Vue.js -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <!-- style.css -->
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <div id="app" class="container">
-    <!-- logo -->
-    <section class="logo">
-      <img src="assets/img/logo.png" alt="logo Boolean">
-    </section>
-    <!-- todolist -->
-    <section class="todolist">
-      <input type="text" placeholder="...">
-      <i class="fas fa-plus fa-x2"></i>
-    </section>
-    <!-- ul -->
-    <section class="list">
-      <ul>
-        <!-- creo gli li dinamicamente con ciclo v-for-->
-        <li 
-          v-for="(el, index) in toDoarray"
-          :class="el.checked === true ? 'checked' : null"
-          @click="el.checked = !el.checked">
-        {{el.action}}
-        <!-- richiamo la funzione removeItem per eliminare li al click su fa-times -->
-          <i
-          @click="removeItem" 
-          class="fas fa-times"></i>
-        </li>
-      </ul>
-      
-    </section>
-  </div>
-  <script src="assets/js/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <!-- f_awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- style.css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="app" class="container">
+      <!-- logo -->
+      <section class="logo">
+        <img src="assets/img/logo.png" alt="logo Boolean" />
+      </section>
+      <!-- todolist -->
+      <section class="todolist">
+        <input
+          @keyup.enter="addItem"
+          v-model="str"
+          type="text"
+          placeholder="..."
+        />
+        <i @click="addItem" class="fas fa-plus"></i>
+        <h3 v-if="visibility">
+          Attenzione. Inserire un dato più lungo di due caratteri
+        </h3>
+      </section>
+      <!-- ul -->
+      <section class="list">
+        <ul>
+          <!-- creo gli li dinamicamente con ciclo v-for-->
+          <li
+            v-for="(el, index) in toDoarray"
+            :class="el.checked === true ? 'checked' : null"
+            @click="el.checked = !el.checked"
+          >
+            {{el.action}}
+            <!-- richiamo la funzione removeItem per eliminare li al click su fa-times -->
+            <i @click.stop="removeItem(index)" class="fas fa-times"></i>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
