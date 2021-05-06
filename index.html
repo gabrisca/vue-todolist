@@ -41,15 +41,17 @@
         <ul>
           <!-- creo gli li dinamicamente con ciclo v-for-->
           <li
-            v-for="(el, index) in toDoarray"
-            :class="el.checked === true ? 'checked' : null"
-            @click="el.checked = !el.checked"
+            v-for="(item, index) in toDoarray"
+            :class="item.checked === true ? 'checked' : null"
+            @click="item.checked = !item.checked"
           >
-            {{el.action}}
+            {{item.action}}
             <!-- richiamo la funzione removeItem per eliminare li al click su fa-times -->
             <i
              @click.stop="removeItem(index)" 
-             class="fas fa-times"></i>
+             class="fas fa-times"
+            >
+            </i>
           </li>
         </ul>
       </section>

@@ -35,7 +35,10 @@ const app = new Vue({
   methods: {
     // funzione per rimuovere li
     removeItem(index) {
+      // se toDoArray ha la classe chiecked attiva (true) eliminalo
+      if(this.toDoarray[index].checked === true){
         this.toDoarray.splice(index, 1)
+      }
     },
     // funzione per aggiungere li
     addItem() {
